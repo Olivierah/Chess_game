@@ -42,3 +42,19 @@ Técnicas de orientação a obejtos aplicadas:
 
 - Elementos estáticos
 - Encapsulamento
+
+---------------------------------------------------
+
+v 0.4 : Criação da Classe "Screen"
+
+Implementações:
+
+- Iniciando a implementação das peças no tabuleiro (King/Tower)
+
+Técnicas de orientação a obejtos aplicadas:
+
+- Herança (King is a Piece/Tower is a Piece)
+- Associações: Piece to GameChess( Um para um ) | GameChess to Piece (Um para vários)
+- Construtor
+- Base
+
