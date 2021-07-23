@@ -14,12 +14,12 @@ namespace ChessGameConsole.Chessboard
         {
         }
 
-        public Piece(Position position, Color color, int moveCount, GameBoard gameBoard)
+        public Piece(Color color, GameBoard gameBoard)
         {
-            Position = position;
+            Position = null;
             Color = color;
-            MoveCount = 0;
             GameBoard = gameBoard;
+            MoveCount = 0;
         }
     }
 }
