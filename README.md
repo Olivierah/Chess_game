@@ -1,5 +1,5 @@
 # Chess_game
- Projeto de jogo de xadrez completamente fucnional
+ Projeto de jogo de xadrez completamente funcional
  
  ## Por quê?
  Este projeto faz parte do meu portfólio pessoal, com o objetivo de contribuir para meu crescimento e melhorar minhas habilidades de desenvolvedor.
