@@ -17,7 +17,9 @@ Técnicas de orientação a obejtos aplicadas:
 ---------------------------------------------------
 
 v 0.2 : Criação da Enumeração "Color"
+
 v 0.2 : Criação da Classe "Piece"
+
 v 0.2 : Criação da Classe "GameBoard"
 
 Implementações:
