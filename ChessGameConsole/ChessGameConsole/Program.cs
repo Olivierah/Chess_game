@@ -7,7 +7,9 @@ namespace ChessGameConsole
     {
         static void Main(string[] args)
         {
-            Position position = new Position();
+            GameBoard game = new GameBoard(8, 8);
+
+            Screen.PrintGameBoard(game);
 
 
         }
