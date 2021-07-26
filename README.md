@@ -58,3 +58,15 @@ Técnicas de orientação a obejtos aplicadas:
 - Construtor
 - Base
 
+---------------------------------------------------
+
+v 0.4 : Criação da Classe "Screen"
+
+Implementações:
+
+- Criação da classe "ChessBoardExceptions"
+
+Técnicas de orientação a obejtos aplicadas:
+
+- Sobrecarga 
+- Exceções
