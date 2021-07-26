@@ -1,6 +1,7 @@
 ﻿using System;
-using ChessGameConsole.Chessboard;
 using ChessGameConsole.Chess;
+using ChessGameConsole.Chessboard;
+using ChessGameConsole.Chessboard.Exceptions;
 
 namespace ChessGameConsole
 {
@@ -8,12 +9,19 @@ namespace ChessGameConsole
     {
         static void Main(string[] args)
         {
-            GameBoard game = new GameBoard(8, 8);
+            try
+            {
+                GameBoard game = new GameBoard(8, 8);
 
-            game.AddPiece(new Tower(game, Chessboard.Enums.Color.Black), new Position(0, 0));
+                game.AddPiece(new Tower(game, Chessboard.Enums.Color.Black), new Position(0, 0));
+                game.AddPiece(new King(game, Chessboard.Enums.Color.Black), new Position(0, 9));
 
-            Screen.PrintGameBoard(game);
-
+                Screen.PrintGameBoard(game);
+            }
+            catch(ChessBoardExceptions e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
         }
     }
