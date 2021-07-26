@@ -45,7 +45,7 @@ Técnicas de orientação a obejtos aplicadas:
 
 ---------------------------------------------------
 
-v 0.4 : Criação da Classe "Screen"
+v 0.4 : Criação da Classe "Chess"
 
 Implementações:
 
@@ -60,11 +60,11 @@ Técnicas de orientação a obejtos aplicadas:
 
 ---------------------------------------------------
 
-v 0.5 : Criação da Classe "Screen"
+v 0.5 : Criação da classe "ChessBoardExceptions"
 
 Implementações:
 
-- Criação da classe "ChessBoardExceptions"
+- Exceções personalizadas
 
 Técnicas de orientação a obejtos aplicadas:
 
