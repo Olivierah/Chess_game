@@ -6,7 +6,9 @@
  
  ## Recursos até o momento:
  
- v 0.1 : Criação da classe "Position"
+ v 0.1 - Implementações: 
+ 
+- Criação da classe "Position" 
 
 Técnicas de orientação a obejtos aplicadas:
 
@@ -16,12 +18,11 @@ Técnicas de orientação a obejtos aplicadas:
 
 ---------------------------------------------------
 
-v 0.2 : Criação da Enumeração "Color" <br>
-v 0.2 : Criação da Classe "Piece" <br>
-v 0.2 : Criação da Classe "GameBoard" <br>
+v 0.2 -  
 
-Implementações:
-
+- Criação da Enumeração "Color"
+- Criação da Classe "Piece"
+- Criação da Classe "GameBoard"
 - Início da implementação do tabuleiro
 
 Técnicas de orientação a obejtos aplicadas:
@@ -32,10 +33,9 @@ Técnicas de orientação a obejtos aplicadas:
 
 ---------------------------------------------------
 
-v 0.3 : Criação da Classe "Screen"
+v 0.3 - Implementações:
 
-Implementações:
-
+- Criação da Classe "Screen"
 - Início da implementação que exibe o tabuleiro
 
 Técnicas de orientação a obejtos aplicadas:
@@ -45,10 +45,9 @@ Técnicas de orientação a obejtos aplicadas:
 
 ---------------------------------------------------
 
-v 0.4 : Criação da Classe "Chess"
+v 0.4 - Implementações:
 
-Implementações:
-
+- Criação da Classe "Chess"
 - Iniciando a implementação das peças no tabuleiro (King/Tower)
 
 Técnicas de orientação a obejtos aplicadas:
@@ -60,11 +59,10 @@ Técnicas de orientação a obejtos aplicadas:
 
 ---------------------------------------------------
 
-v 0.5 : Criação da classe "ChessBoardExceptions"
-
-Implementações:
+v 0.5 - Implementações:
 
 - Exceções personalizadas
+- Criação da classe "ChessBoardExceptions"
 
 Técnicas de orientação a obejtos aplicadas:
 
@@ -73,10 +71,9 @@ Técnicas de orientação a obejtos aplicadas:
 
 ---------------------------------------------------
 
-v 0.6 : Criação da classe "ChessPositions"
+v 0.6 - Implementações:
 
-Implementações:
-
+- Criação da classe "ChessPositions"
 - Conversão da orientação de uma matriz (número/número) para a orientação de um tabuleiro (letra/número).
 
 Técnicas de orientação a obejtos aplicadas:
