@@ -70,3 +70,17 @@ Técnicas de orientação a obejtos aplicadas:
 
 - Sobrecarga 
 - Exceções
+
+---------------------------------------------------
+
+v 0.6 : Criação da classe "ChessPositions"
+
+Implementações:
+
+- Conversão da orientação de uma matriz (número/número) para a orientação de um tabuleiro (letra/número).
+
+Técnicas de orientação a obejtos aplicadas:
+
+- Encapsulamento 
+- Construtores
+- Sobreposição (ToString)

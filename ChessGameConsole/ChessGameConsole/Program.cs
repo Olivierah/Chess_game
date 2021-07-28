@@ -11,17 +11,18 @@ namespace ChessGameConsole
         {
             try
             {
-                GameBoard game = new GameBoard(8, 8);
+                ChessPosition pos = new ChessPosition('c', 7);
+                Console.WriteLine(pos);
+                Console.WriteLine(pos.ToPosition());
+                Console.ReadLine();
 
-                game.AddPiece(new Tower(game, Chessboard.Enums.Color.Black), new Position(0, 0));
-                game.AddPiece(new King(game, Chessboard.Enums.Color.Black), new Position(0, 9));
 
-                Screen.PrintGameBoard(game);
             }
             catch(ChessBoardExceptions e)
             {
                 Console.WriteLine(e.Message);
             }
+
 
         }
     }
