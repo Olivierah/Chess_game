@@ -18,7 +18,7 @@ Técnicas de orientação a obejtos aplicadas:
 
 ---------------------------------------------------
 
-v 0.2 -  
+v 0.2 - Implementações:
 
 - Criação da Enumeração "Color"
 - Criação da Classe "Piece"
