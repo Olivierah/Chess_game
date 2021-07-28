@@ -81,3 +81,14 @@ Técnicas de orientação a obejtos aplicadas:
 - Encapsulamento 
 - Construtores
 - Sobreposição (ToString)
+
+---------------------------------------------------
+
+v 0.7 : Implementações:
+
+- Melhorando a impressão do tabuleiro
+
+Técnicas de orientação a obejtos aplicadas:
+
+- Elementos estáticos (Método "PrintPiece")
+

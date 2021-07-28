@@ -1,4 +1,6 @@
-﻿using ChessGameConsole.Chessboard;
+﻿using System;
+using ChessGameConsole.Chessboard;
+using ChessGameConsole.Chessboard.Enums;
 
 namespace ChessGameConsole
 {
@@ -8,6 +10,7 @@ namespace ChessGameConsole
         {
             for (int l = 0; l < game.Lines; l++)
             {
+                System.Console.Write(8 - l + " ");
                 for (int c = 0; c < game.Columns; c++)
                 {
                     if(game.piece(l,c) == null)
@@ -16,12 +19,28 @@ namespace ChessGameConsole
                     }
                     else
                     {
-                        System.Console.Write($"{game.piece(l, c)} ");
+                       PrintPiece(game.piece(l,c));
+                       Console.Write(" ");
                     }
                 }
                 System.Console.WriteLine();
             }
+            System.Console.WriteLine("  A B C D E F G H");
+        }
 
+        public static void PrintPiece(Piece piece)
+        {
+            if(piece.Color == Color.White)
+            {
+                System.Console.Write(piece);
+            }
+            else
+            {
+                ConsoleColor aux = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write(piece);
+                Console.ForegroundColor = aux;
+            }
         }
     }
 }
