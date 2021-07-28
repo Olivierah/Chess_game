@@ -12,15 +12,22 @@ namespace ChessGameConsole
         {
             try
             {
-                GameBoard game = new GameBoard(8, 8);
+                ChessMatch match = new ChessMatch();
 
-                game.AddPiece(new Tower(game, Color.Black), new Position(0, 0));
-                game.AddPiece(new Tower(game, Color.Black), new Position(1, 3));
-                game.AddPiece(new King(game, Color.Black), new Position(0, 2));
+                while (!match.Finished)
+                {
+                    Console.Clear();
+                    Screen.PrintGameBoard(match.Board);
 
-                game.AddPiece(new Tower(game, Color.White), new Position(3, 5));
+                    Console.Write("\nOrigem: ");
+                    Position origin = Screen.ReadChessPosition().ToPosition();
+                    Console.Write("Destiny: ");
+                    Position destiny = Screen.ReadChessPosition().ToPosition();
 
-                Screen.PrintGameBoard(game);
+                    match.PerformMove(origin, destiny);
+                }
+                
+                Screen.PrintGameBoard(match.Board);
 
             }
             catch(ChessBoardExceptions e)

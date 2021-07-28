@@ -92,3 +92,18 @@ Técnicas de orientação a obejtos aplicadas:
 
 - Elementos estáticos (Método "PrintPiece")
 
+---------------------------------------------------
+
+v 0.8 : Implementações:
+
+- Criação da classe "ChessMate"
+- Início da implementação do método "PerformMove"
+- Delegação da instânciação das peças para a classe "ChessMate"
+- Interação básica com o usuário
+- Primeiros testes de movimentação das peças
+
+Técnicas de orientação a obejtos aplicadas:
+
+- Encapsulamento
+- Elementos estáticos
+

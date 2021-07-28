@@ -21,5 +21,10 @@ namespace ChessGameConsole.Chessboard
             GameBoard = gameBoard;
             MoveCount = 0;
         }
+
+        public void MovementIncrement()
+        {
+            MoveCount++;
+        }
     }
 }

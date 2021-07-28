@@ -1,4 +1,5 @@
 ﻿using System;
+using ChessGameConsole.Chess;
 using ChessGameConsole.Chessboard;
 using ChessGameConsole.Chessboard.Enums;
 
@@ -26,6 +27,14 @@ namespace ChessGameConsole
                 System.Console.WriteLine();
             }
             System.Console.WriteLine("  A B C D E F G H");
+        }
+
+        public static ChessPosition ReadChessPosition()
+        {
+            string str = Console.ReadLine();
+            char column = str[0];
+            int line = int.Parse(str[1] + "");
+            return new ChessPosition(column, line);
         }
 
         public static void PrintPiece(Piece piece)
