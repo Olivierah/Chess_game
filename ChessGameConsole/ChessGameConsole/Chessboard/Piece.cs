@@ -3,7 +3,7 @@ using ChessGameConsole.Chessboard.Enums;
 
 namespace ChessGameConsole.Chessboard
 {
-    class Piece
+    abstract class Piece
     {
         public Position Position { get; set; }
         public Color Color { get; protected set; }
@@ -26,5 +26,8 @@ namespace ChessGameConsole.Chessboard
         {
             MoveCount++;
         }
+
+        public abstract bool[,] PossiblesMovments();
+
     }
 }

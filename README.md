@@ -107,3 +107,21 @@ Técnicas de orientação a obejtos aplicadas:
 - Encapsulamento
 - Elementos estáticos
 
+---------------------------------------------------
+
+v 0.9 : Implementações:
+
+- Implementação de um método que avalia os possíveis movimentos de uma peça.
+- Melhorias na classe "Screen", método "PrintGameBoard" e "PrintPiece".
+- Melhorias na intrface de interação com o usuário no programa principal.
+
+Técnicas de orientação a obejtos aplicadas:
+
+- Classe abstrata
+- Herança
+- Sobreposição
+- Sobrecarga
+
+Estrutura de dados aplicada:
+
+- Matriz
