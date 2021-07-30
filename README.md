@@ -125,3 +125,21 @@ Técnicas de orientação a obejtos aplicadas:
 Estrutura de dados aplicada:
 
 - Matriz
+
+---------------------------------------------------
+
+v 1.0 : Implementações:
+
+- Implementação dos métodos "Move", "ValidateOrigin" e "ValidateDestiny" dentro da classe "ChessMatch".
+- Implementação dos métodos "VerifyPossiblesMovments" e "CanMoveTo" dentro da classe "Piece".
+- Melhorias na interface de interação com o usuário (Turno de cada jogador).
+- Implementações de tratamento de exceções para movimentos inválidos das peças.
+
+Técnicas de orientação a obejtos aplicadas:
+
+- Encapsulamento.
+- Exceções.
+
+Técnicas de estrutura de dados utilizadas:
+
+- Matriz.

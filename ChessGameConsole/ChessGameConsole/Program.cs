@@ -16,21 +16,33 @@ namespace ChessGameConsole
 
                 while (!match.Finished)
                 {
-                    Console.Clear();
-                    Screen.PrintGameBoard(match.Board);
+                    try
+                    {
+                        Console.Clear();
+                        Screen.PrintGameBoard(match.Board);
+                        Console.WriteLine($"\nTurno: {match.Turn}");
+                        Console.WriteLine($"Aguardando jogada: {match.CurrentPlayer}");
 
-                    Console.Write("\nOrigem: ");
-                    Position origin = Screen.ReadChessPosition().ToPosition();
+                        Console.Write("\nOrigem: ");
+                        Position origin = Screen.ReadChessPosition().ToPosition();
+                        match.ValidateOrigin(origin);
 
-                    bool[,] possiblesMovments = match.Board.piece(origin).PossiblesMovments();
+                        bool[,] possiblesMovments = match.Board.piece(origin).PossiblesMovments();
 
-                    Console.Clear();
-                    Screen.PrintGameBoard(match.Board, possiblesMovments);
+                        Console.Clear();
+                        Screen.PrintGameBoard(match.Board, possiblesMovments);
 
-                    Console.Write("\nDestino: ");
-                    Position destiny = Screen.ReadChessPosition().ToPosition();
+                        Console.Write("\nDestino: ");
+                        Position destiny = Screen.ReadChessPosition().ToPosition();
+                        match.ValidateDestiny(origin, destiny);
 
-                    match.PerformMove(origin, destiny);
+                        match.Move(origin, destiny);
+                    }
+                    catch(ChessBoardExceptions e)
+                    {
+                        Console.WriteLine(e.Message);
+                        Console.ReadLine();
+                    }
                 }
                 
                 Screen.PrintGameBoard(match.Board);

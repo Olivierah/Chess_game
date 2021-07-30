@@ -27,6 +27,28 @@ namespace ChessGameConsole.Chessboard
             MoveCount++;
         }
 
+        public bool VerifyPossiblesMovments()
+        {
+            bool[,] mat = PossiblesMovments();
+            for (int l=0; l<GameBoard.Lines; l++)
+            {
+                for(int c=0; c<GameBoard.Columns; c++)
+                {
+                    if(mat[l, c] == true)
+                    {
+                        return true;
+                    }
+                    
+                }
+            }
+            return false;
+        }
+
+        public bool CanMoveTo(Position pos)
+        {
+            return PossiblesMovments()[pos.Line, pos.Column];
+        }
+
         public abstract bool[,] PossiblesMovments();
 
     }
