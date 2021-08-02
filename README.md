@@ -96,9 +96,9 @@ Técnicas de orientação a obejtos aplicadas:
 
 v 0.8 : Implementações:
 
-- Criação da classe "ChessMate"
+- Criação da classe "ChessMatch"
 - Início da implementação do método "PerformMove"
-- Delegação da instânciação das peças para a classe "ChessMate"
+- Delegação da instânciação das peças para a classe "ChessMatch"
 - Interação básica com o usuário
 - Primeiros testes de movimentação das peças
 
