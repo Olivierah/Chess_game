@@ -13,6 +13,7 @@ namespace ChessGameConsole.Chess
         public bool Finished { get; private set; }
         private HashSet<Piece> Pieces;
         private HashSet<Piece> Captured;
+        public bool Check { get; private set; }
 
 
         public ChessMatch()
@@ -21,12 +22,13 @@ namespace ChessGameConsole.Chess
             Turn = 1;
             CurrentPlayer = Color.White;
             Finished = false;
+            Check = false;
             Pieces = new HashSet<Piece>();
             Captured = new HashSet<Piece>();
             AddPiece();
         }
 
-        public void PerformMove(Position origin, Position destiny)
+        public Piece PerformMove(Position origin, Position destiny)
         {
             Piece p = Board.RemovePiece(origin);
             p.MovementIncrement();
@@ -36,13 +38,42 @@ namespace ChessGameConsole.Chess
             {
                 Captured.Add(CapturedPiece);
             }
+            return CapturedPiece;
         }
 
         public void Move(Position origin, Position destiny)
         {
-            PerformMove(origin, destiny);
+            Piece capturedPiece = PerformMove(origin, destiny);
+
+            if (VerifyCheck(CurrentPlayer))
+            {
+                RollbackMove(origin, destiny, capturedPiece);
+                throw new ChessBoardExceptions("Você não pode se colocar em xeque!");
+            }
+
+            if (VerifyCheck(Adversary(CurrentPlayer)))
+            {
+                Check = true;
+            }
+            else
+            {
+                Check = false;
+            }
+
             Turn++;
             SwapPlayer();
+        }
+
+        public void RollbackMove(Position origin, Position destiny, Piece capturedPiece)
+        {
+            Piece p = Board.RemovePiece(destiny);
+            p.MovementDecrement();
+            if (capturedPiece != null)
+            {
+                Board.AddPiece(capturedPiece, destiny);
+                Captured.Remove(capturedPiece);
+            }
+            Board.AddPiece(p, origin);
         }
 
         public void ValidateOrigin(Position pos)
@@ -106,6 +137,48 @@ namespace ChessGameConsole.Chess
             }
             aux.ExceptWith(CapturedPieces(color));
             return aux;
+        }
+
+        private Color Adversary(Color color)
+        {
+            if (color == Color.White)
+            {
+                return Color.Black;
+            }
+            else
+            {
+                return Color.White;
+            }
+        }
+
+        private Piece King(Color color)
+        {
+            foreach(Piece p in PieceInGame(color))
+            {
+                if (p is King)
+                {
+                    return p;
+                }
+            }
+            return null;
+        }
+
+        public bool VerifyCheck(Color color)
+        {
+            Piece K = King(color);
+            if(K == null)
+            {
+                throw new ChessBoardExceptions($"O tabuleiro não possui um rei da cor {color}");
+            }
+            foreach(Piece p in PieceInGame(Adversary(color)))
+            {
+                bool[,] mat = p.PossiblesMovments();
+                if(mat[K.Position.Line, K.Position.Column])
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void PutNewPiece(char column, int line, Piece piece)

@@ -27,6 +27,11 @@ namespace ChessGameConsole.Chessboard
             MoveCount++;
         }
 
+        public void MovementDecrement()
+        {
+            MoveCount--;
+        }
+
         public bool VerifyPossiblesMovments()
         {
             bool[,] mat = PossiblesMovments();

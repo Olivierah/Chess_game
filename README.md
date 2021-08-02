@@ -160,4 +160,26 @@ Técnicas de estrutura de dados utilizadas:
 
 - Conjuntos.
 
+---------------------------------------------------
+
+v 1.2 : Implementações:
+
+- Implementação da lógica de quando o Rei está em xeque. (O rei fica em xeque quando pelo menos uma peça adversária possui o alcance para capturá-lo com um movimento)
+- Implementação dos métodos "Adversary", "King" e "VerifyCheck"  na classe "ChessMatch"
+- Atualização da lógica dos métodos "Move" e "PerformMove" na classe "ChessMatch" (Foi implementada uma regra que impossibilita que o próprio jogador se coloque em xeque)
+- Implementação do método "RollbackMove" na classe "ChessMatch" que desfaz o movimento quando o jogador se coloca em xeque.
+- Implementado o método "MovementDecrement" na classe "Piece"
+- Implementação da verificação de "Xeque" na classe Program.
+
+Técnicas de orientação a obejtos aplicadas:
+
+- Encapsulamento
+- Operador "is" (Testa se um determinado objeto pertence a uma subclasse)
+- Exceções
+
+Técnicas de estrutura de dados utilizadas:
+
+- Matrizes
+
+
 
