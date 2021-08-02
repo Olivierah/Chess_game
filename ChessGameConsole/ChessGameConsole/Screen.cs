@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using ChessGameConsole.Chess;
 using ChessGameConsole.Chessboard;
 using ChessGameConsole.Chessboard.Enums;
@@ -7,6 +8,38 @@ namespace ChessGameConsole
 {
     class Screen
     {
+
+        public static void PrintMatch(ChessMatch match)
+        {
+            PrintGameBoard(match.Board);
+            Console.WriteLine();
+            PrintCapturedPieces(match);
+            Console.WriteLine($"\nTurno: {match.Turn}");
+            Console.WriteLine($"Aguardando jogada: {match.CurrentPlayer}");
+        }
+
+        public static void PrintCapturedPieces(ChessMatch match)
+        {
+            Console.WriteLine("Peças capturadas: ");
+            Console.Write("Brancas: ");
+            PrintSet(match.CapturedPieces(Color.White));
+            Console.Write("Pretas: ");
+            ConsoleColor aux = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            PrintSet(match.CapturedPieces(Color.Black));
+            Console.ForegroundColor = aux;
+        }
+
+        public static void PrintSet(HashSet<Piece> set)
+        {
+            Console.Write("[");
+            foreach(Piece x in set)
+            {
+                Console.Write(x + " ");
+            }
+            Console.Write("]\n");
+        }
+
         public static void PrintGameBoard(GameBoard game)
         {
             for (int l = 0; l < game.Lines; l++)

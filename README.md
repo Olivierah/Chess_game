@@ -143,3 +143,21 @@ Técnicas de orientação a obejtos aplicadas:
 Técnicas de estrutura de dados utilizadas:
 
 - Matriz.
+
+---------------------------------------------------
+
+v 1.1 : Implementações:
+
+- Implementação dos métodos "PutNewPiece", "CapturedPieces" e "PieceInGame" dentro da classe "ChessMatch".
+- Atualização do método "PerformMove" dentro da classe "ChessMatch".
+- Implementação dos métodos "PrintMatch" e "PrintSet" dentro da classe "Screen".
+
+Técnicas de orientação a obejtos aplicadas:
+
+- Elementos estáticos
+
+Técnicas de estrutura de dados utilizadas:
+
+- Conjuntos.
+
+
