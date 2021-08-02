@@ -193,5 +193,12 @@ Técnicas de estrutura de dados utilizadas:
 
 - Matrizes
 
+---------------------------------------------------
+
+v 1.4 : Implementações:
+
+- Implementação de todas as peças restantes e suas regras de movimentação (Queen, Pawn, Bishop, Horse)
+- Conclusão da mecânica base geral.
+
 
 
