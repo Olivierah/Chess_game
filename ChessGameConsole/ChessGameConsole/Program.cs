@@ -42,7 +42,7 @@ namespace ChessGameConsole
                         Console.ReadLine();
                     }
                 }
-                
+                Console.Clear();
                 Screen.PrintGameBoard(match.Board);
 
             }

@@ -181,5 +181,17 @@ Técnicas de estrutura de dados utilizadas:
 
 - Matrizes
 
+---------------------------------------------------
+
+v 1.3 : Implementações:
+
+- Implementação da lógica de Xeque-Mate (Acontece quando não existe nenhum movimento possível para retirar o Rei da posição de xeque)
+- Implementação do método "VerifyCheckmate" na classe "ChessMatch"
+- Implementações na interface do jogador (Xeque e Xeque-Mate)
+
+Técnicas de estrutura de dados utilizadas:
+
+- Matrizes
+
 
 

@@ -60,8 +60,15 @@ namespace ChessGameConsole.Chess
                 Check = false;
             }
 
-            Turn++;
-            SwapPlayer();
+            if (VerifyCheckmate(Adversary(CurrentPlayer)))
+            {
+                Finished = true;
+            }
+            else
+            {
+                Turn++;
+                SwapPlayer();
+            }
         }
 
         public void RollbackMove(Position origin, Position destiny, Piece capturedPiece)
@@ -180,6 +187,38 @@ namespace ChessGameConsole.Chess
             }
             return false;
         }
+
+        public bool VerifyCheckmate(Color color)
+        {
+            if (!VerifyCheck(color))
+            {
+                return false;
+            }
+            foreach(Piece p in PieceInGame(color))
+            {
+                bool[,] mat = p.PossiblesMovments();
+                for (int l=0; l<Board.Lines; l++)
+                {
+                    for(int c=0; c<Board.Columns; c++)
+                    {
+                        if(mat[l, c])
+                        {
+                            Position origin = p.Position;
+                            Position destiny = new Position(l, c);
+                            Piece capturedPiece = PerformMove(origin, destiny);
+                            bool testCheck = VerifyCheck(color);
+                            RollbackMove(origin, destiny, capturedPiece);
+                            if (!testCheck)
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                } 
+            }
+            return true;
+        }
+
 
         public void PutNewPiece(char column, int line, Piece piece)
         {
