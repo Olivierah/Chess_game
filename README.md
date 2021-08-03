@@ -200,5 +200,19 @@ v 1.4 : Implementações:
 - Implementação de todas as peças restantes e suas regras de movimentação (Queen, Pawn, Bishop, Horse)
 - Conclusão da mecânica base geral.
 
+---------------------------------------------------
+
+v 1.5 : Implementações:
+
+- Implementando jogadas especiais: 
+
+** "Roque" (Roque Grande/Roque Pequeno)
+
+- Acontece quando quando o Rei move duas casas para a direita e a Torre move duas casas para a esquerda. Isso só é possível quando o Rei e a Torre ainda não se moveram e se as duas casas entre eles estiverem livres.
+- Implementação realizada na classe "King"
+- Atualização dos métodos "Move" e "PerformMove" para a jogada especial dentro da classe "ChessMatch"
+
+
+
 
 
