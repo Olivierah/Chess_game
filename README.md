@@ -206,7 +206,7 @@ v 1.5 : Implementações:
 
 - Implementando jogadas especiais: 
 
-** "Roque" (Roque Grande/Roque Pequeno)
+## "Roque" (Roque Grande/Roque Pequeno)
 
 - Acontece quando quando o Rei move duas casas para a direita e a Torre move duas casas para a esquerda. Isso só é possível quando o Rei e a Torre ainda não se moveram e se as duas casas entre eles estiverem livres.
 - Implementação realizada na classe "King"
