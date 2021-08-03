@@ -4,7 +4,11 @@
  ## Por quê?
  Este projeto faz parte do meu portfólio pessoal, com o objetivo de contribuir para meu crescimento e melhorar minhas habilidades de desenvolvedor.
  
- ## Recursos até o momento:
+ ## Versão final do Projeto:
+ 
+ - V 1.7
+ 
+ ## O que foi feito em cada atualização?:
  
  v 0.1 - Implementações: 
  
@@ -227,6 +231,18 @@ Técnicas de estrutura de dados utilizadas:
 
 - Matriz
 
+---------------------------------------------------
+
+# Versão final
+
+v 1.7 : Implementações:
+
+- Implementando jogadas especiais: 
+
+## "Promoção/Promotion" 
+
+- Acontece quando o Peão (Pawn) atinge a última linha do campo adversário. Quando isso acontece, o Peão pode assumir as características de movimento de uma Rainha (Queen) ou Cavalo (Horse) ou Torre(Tower) ou Bispo (Bishop).
+- Atualização do método "Move" para a jogada especial "Promoção" dentro da classe "ChessMatch" 
 
 
 
