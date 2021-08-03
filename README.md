@@ -212,6 +212,22 @@ v 1.5 : Implementações:
 - Implementação realizada na classe "King"
 - Atualização dos métodos "Move" e "PerformMove" para a jogada especial dentro da classe "ChessMatch"
 
+---------------------------------------------------
+
+v 1.6 : Implementações:
+
+- Implementando jogadas especiais: 
+
+## "En passant" 
+
+- Movimento especial na captura do Peão/Pawn. Acontece quando um peão avança duas casas e, caso haja um peão adversário em posição de captura, ainda é possível capturar o peão que avançou as duas casas, mesmo que ele tenha saído do alcance de captiura do peão adjacente. A captura é opcional e só pode acontecer no turno seguinte à movimentação de duas casas do peão.
+- Atualização dos métodos "Move", "PerformMove" e "RollbackMove" para a jogada especial "En passant" dentro da classe "ChessMatch" 
+
+Técnicas de estrutura de dados utilizadas:
+
+- Matriz
+
+
 
 
 

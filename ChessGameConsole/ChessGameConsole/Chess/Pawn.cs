@@ -5,8 +5,11 @@ namespace ChessGameConsole.Chess
 {
     class Pawn : Piece
     {
-        public Pawn(GameBoard gameBoard, Color color) : base(color, gameBoard)
+        private ChessMatch Match;
+
+        public Pawn(GameBoard gameBoard, Color color, ChessMatch match) : base(color, gameBoard)
         {
+            Match = match;
         }
 
         public override string ToString()
@@ -53,6 +56,21 @@ namespace ChessGameConsole.Chess
                 {
                     mat[pos.Line, pos.Column] = true;
                 }
+
+                // Jogada especial En passant
+                if(Position.Line == 3)
+                {
+                    Position left = new Position(Position.Line, Position.Column - 1);
+                    if(GameBoard.ValidPosition(left) && CanMove(left) && GameBoard.piece(left) == Match.VulnerableEnPassant)
+                    {
+                        mat[left.Line - 1, left.Column] = true;
+                    }
+                    Position right = new Position(Position.Line, Position.Column + 1);
+                    if (GameBoard.ValidPosition(right) && CanMove(right) && GameBoard.piece(right) == Match.VulnerableEnPassant)
+                    {
+                        mat[right.Line - 1, right.Column] = true;
+                    }
+                }
             }
             else
             {
@@ -75,6 +93,21 @@ namespace ChessGameConsole.Chess
                 if (GameBoard.ValidPosition(pos) && CanMove(pos))
                 {
                     mat[pos.Line, pos.Column] = true;
+                }
+
+                // Jogada especial En passant
+                if (Position.Line == 4)
+                {
+                    Position left = new Position(Position.Line, Position.Column - 1);
+                    if (GameBoard.ValidPosition(left) && CanMove(left) && GameBoard.piece(left) == Match.VulnerableEnPassant)
+                    {
+                        mat[left.Line + 1, left.Column] = true;
+                    }
+                    Position right = new Position(Position.Line, Position.Column + 1);
+                    if (GameBoard.ValidPosition(right) && CanMove(right) && GameBoard.piece(right) == Match.VulnerableEnPassant)
+                    {
+                        mat[right.Line + 1, right.Column] = true;
+                    }
                 }
             }
             return mat;
