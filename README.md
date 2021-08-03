@@ -8,7 +8,7 @@
  
  - V 1.7
  
- ## O que foi feito em cada atualização?:
+ ## O que foi feito em cada atualização?
  
  v 0.1 - Implementações: 
  
